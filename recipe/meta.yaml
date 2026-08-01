@@ -137,6 +137,6 @@ about:
   dev_url: https://github.com/stevenrhall/yapss
 
 extra:
-  feedstock-name: yapss-feedstock
+  feedstock-name: yapss
   recipe-maintainers:
     - stevenrhall
