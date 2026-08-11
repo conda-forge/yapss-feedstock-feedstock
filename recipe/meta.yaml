@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy <2.5
+    - numpy
     - casadi >=3.6.0
     - scipy
     - mpmath
@@ -40,7 +40,7 @@ outputs:
         - pip
       run:
         - python >={{ python_min }}
-        - numpy <2.5
+        - numpy
         - casadi >=3.6.0
         - scipy
         - mpmath
