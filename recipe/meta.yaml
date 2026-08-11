@@ -1,5 +1,5 @@
 {% set name = "yapss" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/y/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef084862f31dddd2c16e53ff60014768a64fb9e7266d75af5477dd3f1f44e405
+  sha256: 7b80d5d3b9e9dc4b812bffa25b0791744a8bb7753ed5df1967603dadcc516c62
 
 build:
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy <2.5
+    - numpy
     - casadi >=3.6.0
     - scipy
     - mpmath
@@ -40,7 +40,7 @@ outputs:
         - pip
       run:
         - python >={{ python_min }}
-        - numpy <2.5
+        - numpy
         - casadi >=3.6.0
         - scipy
         - mpmath
