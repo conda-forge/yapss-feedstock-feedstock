@@ -1,13 +1,13 @@
 {% set name = "yapss" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/y/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7b80d5d3b9e9dc4b812bffa25b0791744a8bb7753ed5df1967603dadcc516c62
+  url: https://files.pythonhosted.org/packages/source/y/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f2bdb29ae74c8e9b3e2b0b630e32b301b9b36acc06cd0b5bbdb589e822cb550c
 
 build:
   noarch: python
