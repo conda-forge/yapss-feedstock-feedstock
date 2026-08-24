@@ -1,5 +1,5 @@
 {% set name = "yapss" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/y/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5c39d488ef2084aa0c4be6315e93c37ae206cf64bad53d99fb76406aa48a906
+  sha256: d8bc6b617b8b728afac5cbe0da40eda91347ba0904b8216a213259c39c93dcba
 
 build:
   noarch: python
@@ -22,7 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - casadi >=3.6.0,<=3.7.2
+    # No ceiling: the pip backend's binding to the Ipopt vendored in the
+    # CasADi wheel is what the ceiling in pyproject.toml guards. This build
+    # links conda-forge's Ipopt through cyipopt and never touches it.
+    - casadi >=3.6.0
     - scipy
     - mpmath
     - matplotlib-base
@@ -41,7 +44,10 @@ outputs:
       run:
         - python >={{ python_min }}
         - numpy
-        - casadi >=3.6.0,<=3.7.2
+        # No ceiling: the pip backend's binding to the Ipopt vendored in the
+        # CasADi wheel is what the ceiling in pyproject.toml guards. This build
+        # links conda-forge's Ipopt through cyipopt and never touches it.
+        - casadi >=3.6.0
         - scipy
         - mpmath
         - matplotlib-base
