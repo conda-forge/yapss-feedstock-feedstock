@@ -22,7 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy
-    - casadi >=3.6.0,<=3.7.2
+    # No ceiling: the pip backend's binding to the Ipopt vendored in the
+    # CasADi wheel is what the ceiling in pyproject.toml guards. This build
+    # links conda-forge's Ipopt through cyipopt and never touches it.
+    - casadi >=3.6.0
     - scipy
     - mpmath
     - matplotlib-base
@@ -41,7 +44,10 @@ outputs:
       run:
         - python >={{ python_min }}
         - numpy
-        - casadi >=3.6.0,<=3.7.2
+        # No ceiling: the pip backend's binding to the Ipopt vendored in the
+        # CasADi wheel is what the ceiling in pyproject.toml guards. This build
+        # links conda-forge's Ipopt through cyipopt and never touches it.
+        - casadi >=3.6.0
         - scipy
         - mpmath
         - matplotlib-base
