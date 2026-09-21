@@ -1,5 +1,5 @@
 {% set name = "yapss" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/y/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d8bc6b617b8b728afac5cbe0da40eda91347ba0904b8216a213259c39c93dcba
+  sha256: 592cb13de80612407acb5eac7818a00a50517ae5b01b2f147c83a5da68b40a22
 
 build:
   noarch: python
